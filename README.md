@@ -1,4 +1,4 @@
-# Elastic stack (ELK) + Syslog on Docker
+# Elastic stack (ELK) + Syslog on Docker (with scapy Sniffer example)
 
 By default, the stack exposes the following ports:
 
