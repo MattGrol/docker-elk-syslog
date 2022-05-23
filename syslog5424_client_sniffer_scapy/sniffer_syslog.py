@@ -8,6 +8,9 @@ from random import randint
 from datetime import datetime
 import binascii
 
+syslog_server_ip="127.0.0.1"
+syslog_server_port="5000"
+
 seed(int(datetime.timestamp(datetime.now())))
 
 logger=None
@@ -68,7 +71,7 @@ def send_syslog_packet(packet):
 	
 if __name__ == "__main__":
 
-	logger=init_logger(name_logger="test_scapy",syslog_server_ip="127.0.0.1", syslog_server_port="5000",hostname="",appname="",procid=None)
+	logger=init_logger(name_logger="test_scapy",syslog_server_ip=syslog_server_ip, syslog_server_port=syslog_server_port,hostname="",appname="",procid=None)
 	sniff(prn=send_syslog_packet)
 
 
